@@ -57,3 +57,12 @@ public class QuickCheck {
       return sum;
   }
 }
+
+/**
+ * Notes:
+ * 
+ * Things I got stuck on- 
+ * Test case didn't pass of multiple level longer than 7 (printLongerThan7)
+ * 
+ * Combining all odd values in the data structure. 
+ */
