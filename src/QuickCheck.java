@@ -24,8 +24,8 @@ public class QuickCheck {
       {
         System.out.println(node.value);
       }
-      printLongerThan7(node.right);
       printLongerThan7(node.left);
+      printLongerThan7(node.right);
 
     }
 
@@ -42,27 +42,32 @@ public class QuickCheck {
    * @return the sum of all odd-valued nodes
    */
   public static int oddSum(TreeNode<Integer> node) {
-    int sum = 0;
+    int current;
+  
       if(node == null)
       {
         return 0;
       }
       if(node.value % 2 !=0)
       {
-        return node.value;
+        current = node.value;
       }
+      else current = 0;
+      
       int oddLeft = oddSum(node.left);
       int oddRight = oddSum(node.right);
-      sum = oddLeft + oddRight;
-      return sum;
+      return current + oddLeft + oddRight;
   }
 }
+
 
 /**
  * Notes:
  * 
- * Things I got stuck on- 
- * Test case didn't pass of multiple level longer than 7 (printLongerThan7)
+ * Things to study: 
+ * Reading directions and using a preorder traversal
  * 
  * Combining all odd values in the data structure. 
+ * 
+ * Understand what occurs during recursion and visualizing it 
  */
